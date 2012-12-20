@@ -1,3 +1,5 @@
+#Author: Kelton
+
 def hello
 	"Hello"
 end

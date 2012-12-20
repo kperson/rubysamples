@@ -1,3 +1,5 @@
+#Author: Kelton
+
 class Person
 	
 	#@ means an instance variable

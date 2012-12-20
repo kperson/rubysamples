@@ -1,3 +1,4 @@
+#Author: Kelton
 =begin
 Functional programming
 	1. functions are first class 
