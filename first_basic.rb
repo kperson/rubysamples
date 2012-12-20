@@ -42,20 +42,23 @@ my_hash.delete("age") # don't worry about :age still present in hash
 my_hash["middleName"] = "Moreland"
 puts my_hash
 
-#Bang vs. Not Bang
-#Bang means the method is modifing the parameter sort => returns an new array, sort! => sorts the input array
+=begin
+Bang vs. Not Bang
+#Bang means the method is modifing the parameter (sort => returns an new array, sort! => sorts the input array)
+=end
 
+=begin
+Symbols are a way to store frequently used strings or references
+If you are using "firstName" in 1000 places you can replace it with :firstName => and it will only take up 1/1000 of the memory need
+=end
 
-#Symbols
-#Are a way to store frequently used strings or references
-#If you are using "firstName" in 1000 places you can replace it with :firstName => and it will only take up 1/1000 of the #memory need
 my_hash = { :firstName => "Kelton", :lastName => "Person", :age => 25 }
 my_hash[:firstName]
 my_hash.delete(:age)
 my_hash[:middleName]
 puts :firstName.to_s
 
-#IF else
+#if else
 num = 6
 if num == 3
  puts "Num = 3, yea!"
@@ -64,9 +67,6 @@ elsif num == 5
 else
   puts "I only like 3 and 5, all other numbers are terrible"
 end
-
-
-
 
 #Tips
 #List all class methods by calling Classname.instance_methods

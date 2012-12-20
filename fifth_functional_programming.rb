@@ -1,9 +1,8 @@
 =begin
 Functional programming
 	1. functions are first class 
-	2. method class have no side effects
-	3. onece an object is declared you don't re-assign it
-Functional with functional features = Scala, Ruby, Clojure, JavaScript, Haskhell, C#
+	2. methods have no side effects
+	3. once an object is declared you don't re-assign it
 	
 	1. First Class
 	someJSFunction = function(someParameter) {
@@ -17,17 +16,18 @@ Functional with functional features = Scala, Ruby, Clojure, JavaScript, Haskhell
 	
 	callMyMethod(someJSFunction, "Hello World")
 	
-	I was able to pass someJsFunction (a function) like a first class citizen (e.g. string, ints, objects etc.)
+	I was able to pass someJsFunction (a function) like a first class citizen (e.g. string, int, object etc.)
 	
 	
 	2. Methods have no side effects
 	var fruits = ["Banana", "Orange", "Apple", "Mango"];
 	fruits.sort();
 	Not functional, fruits has been modified
-	Functioal implies that the program would function the same if the a method call is replaced by its results
-	fruits.sort() would be functional if the origin array rename the same and the sort function returned a new result instead	
 	
-	3. Once an object is declared you don'y re-assign it
+	Functioal => the program would function the same if the a method call is replaced by its results
+	fruits.sort() would be functional if the original array remained unmodified and the sort function returned a new sorted array instead	
+	
+	3. Once an object is declared you don't re-assign it
 	NOT FUNCTIONAL
 	var fruits = ["Banana", "Orange", "Apple", "Mango"];
 	fruits = ["Grapefruit", "Watermelon"];
@@ -44,15 +44,19 @@ array = [1, 2, 3, 4]
 #puts array
 #puts new_array
 
-#equivalent to scala map or yield function
+
 new_array = array.collect do |n|
 	n ** 2
 end
+
+
+#Don't get to caught on the details, you will mostly likely only use the iterate function style, but I showed the others because they do exist
 
 class Array
 	def iterate
 		my_list = []
 		self.each_with_index do |n, i|
+			#yield is a reference to the function passed
 			my_list.push(yield(n))
 		end
 		my_list
@@ -101,7 +105,7 @@ puts ""
 puts results_4
 puts ""
 
-#Post likely you will use the first and forth versions
+#Most likely you will use the first and forth version (results or results_4)
 
 #Other Samples
 
@@ -125,7 +129,7 @@ foreach($new_list as $x){
 $filterd_and_squared_and_reversed = array_reverse($squared_list)	
 =end	
 
-#PHP is about times as much code and much less easy to understand
+#PHP is about three times as much code and much less easy to understand
 
 # A little bit cleaner version in ruby, maybe
 filtered_and_squared_and_reversed_clean = 
